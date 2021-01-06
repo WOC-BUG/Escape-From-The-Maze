@@ -53,8 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Scripts\BackToScene.cs" />
+     <Compile Include="Assets\Scenes\Scripts\Collide.cs" />
      <Compile Include="Assets\Scenes\Scripts\ControlCamera.cs" />
+     <Compile Include="Assets\Scenes\Scripts\ControlGame.cs" />
+     <Compile Include="Assets\Scenes\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scenes\Scripts\Run.cs" />
+     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>D:/Escape-From-The-Maze/EscapeFromTheMaze/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
