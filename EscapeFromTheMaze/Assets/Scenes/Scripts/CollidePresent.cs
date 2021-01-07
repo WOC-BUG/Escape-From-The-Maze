@@ -17,8 +17,7 @@ public class CollidePresent : MonoBehaviour
         Debug.Log("是否获取到星星：" + parameter.GetComponent<PassParameter>().star);
         Debug.Log("是否获取到礼物：" + parameter.GetComponent<PassParameter>().present);
         Debug.Log("是否获取到雪花：" + parameter.GetComponent<PassParameter>().snow);
-        //加载场景，但不销毁原场景
-        //LoadSceneMode有两种：Single表示关闭原场景，Additive表示将场景添加到当前加载的场景中
-        SceneManager.LoadSceneAsync("Vuforia", LoadSceneMode.Single);
+
+        SceneManager.LoadScene("Vuforia");
     }
 }

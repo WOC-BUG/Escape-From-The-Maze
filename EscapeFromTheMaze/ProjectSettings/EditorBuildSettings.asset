@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vuforia.unity
     guid: 091c23ff41f678641839d81070914a9c
+  - enabled: 1
+    path: Assets/Scenes/EmptyScene.unity
+    guid: 7b12a26ce38781b4d8f72c74fb4e9d97
   m_configObjects: {}
