@@ -18,6 +18,7 @@ public class BackToScene : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene("Maze"); //切换场景
+        //SceneManager.LoadScene("Maze"); //切换场景
+        Application.Quit(); //关闭场景
     }
 }

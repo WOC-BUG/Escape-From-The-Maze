@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="school" size="5.000000 7.500000" />
+    <ImageTarget name="bg_part" size="5.000000 7.490741" />
+    <ImageTarget name="bg_full" size="5.000000 8.888889" />
+  </Tracking>
+</QCARConfig>

@@ -6,20 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class ControlGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Quit()
     {
-        Application.Quit();
+        Application.Quit(); //退出游戏
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Maze"); //重新加载场景
     }
 }

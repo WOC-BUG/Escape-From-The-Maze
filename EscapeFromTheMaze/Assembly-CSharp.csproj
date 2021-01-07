@@ -57,9 +57,26 @@
      <Compile Include="Assets\Scenes\Scripts\Collide.cs" />
      <Compile Include="Assets\Scenes\Scripts\ControlCamera.cs" />
      <Compile Include="Assets\Scenes\Scripts\ControlGame.cs" />
+     <Compile Include="Assets\Scenes\Scripts\PassParameter.cs" />
      <Compile Include="Assets\Scenes\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scenes\Scripts\Run.cs" />
+     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Vuforia\Shaders\VuforiaVB_YUVNV12_YUVNV21.cginc" />
+     <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
+     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+     <None Include="Assets\Vuforia\Shaders\VuforiaVB_YUV420P_YUVYV12.cginc" />
+     <None Include="Assets\Vuforia\Shaders\VuforiaVideoBackground.cginc" />
+     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
+     <None Include="Assets\StreamingAssets\Vuforia\Background.xml" />
+     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
+     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
+     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
+     <None Include="Assets\Vuforia\Shaders\VuforiaVB_RGB.cginc" />
+     <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>D:/Escape-From-The-Maze/EscapeFromTheMaze/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
@@ -639,6 +656,12 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>F:/2018.4.30f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="VuforiaScripts.csproj">
+      <Project>{15C8ADF3-1A1F-0660-DEE1-BA4E7B4FE382}</Project>      <Name>VuforiaScripts</Name>    </ProjectReference>
+    <ProjectReference Include="VuforiaEditorScripts.csproj">
+      <Project>{5FC2B47E-64F6-E943-E617-EEB8DD60EBF8}</Project>      <Name>VuforiaEditorScripts</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
