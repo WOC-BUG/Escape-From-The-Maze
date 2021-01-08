@@ -55,19 +55,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Scripts\BackToScene.cs" />
-    <Compile Include="Assets\Scenes\Scripts\CollidePresent.cs" />
-    <Compile Include="Assets\Scenes\Scripts\CollideSnow.cs" />
-    <Compile Include="Assets\Scenes\Scripts\CollideStar.cs" />
-    <Compile Include="Assets\Scenes\Scripts\ControlCamera.cs" />
-    <Compile Include="Assets\Scenes\Scripts\ControlGame.cs" />
-    <Compile Include="Assets\Scenes\Scripts\LoadMaze.cs" />
-    <Compile Include="Assets\Scenes\Scripts\PassParameter.cs" />
-    <Compile Include="Assets\Scenes\Scripts\PresentRotate.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Rotate.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Run.cs" />
-    <Compile Include="Assets\Scenes\Scripts\SnowRotate.cs" />
-    <Compile Include="Assets\Scenes\Scripts\StarRotate.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\EmptyScene\LoadMaze.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Index\GameControl.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\CollideEffect.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\CollidePresent.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\CollideSnow.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\CollideStar.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\ControlCamera.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\ControlGame.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\PassParameter.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\Rotate.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Maze\Run.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Vuforia\BackToScene.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Vuforia\PresentRotate.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Vuforia\SnowRotate.cs" />
+    <Compile Include="Assets\MazeGame\Scripts\Vuforia\StarRotate.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
