@@ -9,12 +9,12 @@ public class GameControl : MonoBehaviour
     private GameObject passObject;
     //private GameObject score;
     private string oldTime;
-    private static bool isExist = false;    //是否已经存在DontDestroy的物体
+    //private static bool isExist = false;    //是否已经存在DontDestroy的物体
 
     void Awake()
     {
         //score = GameObject.Find("TimeScore");
-
+        //DontDestroyOnLoad(score);
         //if (!isExist)
         //{
         //    //如果第一次加载，将这些物体设为DontDestroy
@@ -30,7 +30,7 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(score);
+
         oldTime = GameObject.Find("TimeScore").GetComponent<Text>().text;
         passObject = GameObject.Find("Parameter");
 

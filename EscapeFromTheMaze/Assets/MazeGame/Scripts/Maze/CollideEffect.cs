@@ -15,11 +15,11 @@ public class CollideEffect : MonoBehaviour
     void Update()
     {
         parameter = GameObject.Find("Parameter");
-        parameter.GetComponent<PassParameter>().finishGame = true;  //标记游戏通关
     }
 
     void OnTriggerEnter(Collider other)
     {
+        parameter.GetComponent<PassParameter>().finishGame = true;  //标记游戏通关
         SceneManager.LoadScene("Index");    //返回首页
         //SceneManager.LoadSceneAsync("Index", LoadSceneMode.Additive);
     }
