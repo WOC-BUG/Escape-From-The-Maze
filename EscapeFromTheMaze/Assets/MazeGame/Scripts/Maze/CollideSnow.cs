@@ -18,6 +18,10 @@ public class CollideSnow : MonoBehaviour
         Debug.Log("是否获取到礼物：" + PassParameter.present);
         Debug.Log("是否获取到雪花：" + PassParameter.snow);
 
+        // 设置按钮未按下
+        GoForward.isDown = false;
+        GoBack.isDown = false;
+
         Destroy(GameObject.Find("Snowflake"));     //碰撞后就销毁物体
         SceneManager.LoadScene("Vuforia");
         //SceneManager.LoadSceneAsync("Vuforia", LoadSceneMode.Additive);

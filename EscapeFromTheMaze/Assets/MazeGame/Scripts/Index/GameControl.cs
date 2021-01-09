@@ -30,9 +30,11 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         oldTime = GameObject.Find("TimeScore").GetComponent<Text>().text;
         passObject = GameObject.Find("Parameter");
+
+        //关闭Maze场景音效
+        passObject.GetComponent<AudioSource>().mute = true;
 
         Debug.Log("finishGame：" + PassParameter.finishGame);
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlCamera : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
+    public float moveSpeed = 2.0f;
     public Transform SphereTransform;   //小球当前位置
     private Vector3 distance;           //摄像机于小球之间的距离
 
@@ -20,8 +20,9 @@ public class ControlCamera : MonoBehaviour
         //主摄像机的位置=每次小球移动的位置+之间的距离
         transform.position = SphereTransform.position + distance;
 
-        //手指触摸/电脑左键点击
-        if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) || Input.GetMouseButton(0))
+        //触屏手指触摸，电脑左键点击为Input.GetMouseButton(0)
+        if (((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved))
+            && Input.mousePosition.x>= Screen.width/3)  //在屏幕1/3处以外点击才有效，为了防止点击前进和后退按钮干扰游戏
         {
             // 获得鼠标当前位置的X和Y
             float mouseX = Input.GetAxis("Mouse X") * moveSpeed;

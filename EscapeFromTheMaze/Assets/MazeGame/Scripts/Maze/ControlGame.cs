@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ControlGame : MonoBehaviour
 {
     private GameObject passObject;
+    private GameObject buttons;
     //private static bool isExist = false;    //是否已经存在DontDestroy的物体
     void Awake()
     {

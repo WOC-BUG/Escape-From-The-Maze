@@ -19,6 +19,10 @@ public class CollideEffect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // 设置按钮未按下
+        GoForward.isDown = false;
+        GoBack.isDown = false;
+
         PassParameter.finishGame = true;  //标记游戏通关
         SceneManager.LoadScene("Index");    //返回首页
         //SceneManager.LoadSceneAsync("Index", LoadSceneMode.Additive);

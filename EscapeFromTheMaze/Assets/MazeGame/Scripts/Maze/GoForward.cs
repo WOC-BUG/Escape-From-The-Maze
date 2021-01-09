@@ -10,7 +10,7 @@ public class GoForward : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     //h和v的值传回给player脚本，使得物体移动
     public static float h;
     public static float v;
-    private bool isDown = false;    //按钮是否被按下
+    public static bool isDown = false;    //按钮是否被按下
 
     // Start is called before the first frame update
     void Start()

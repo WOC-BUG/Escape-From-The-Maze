@@ -18,6 +18,10 @@ public class CollideStar : MonoBehaviour
         Debug.Log("是否获取到礼物："+ PassParameter.present);
         Debug.Log("是否获取到雪花："+ PassParameter.snow);
 
+        // 设置按钮未按下
+        GoForward.isDown = false;
+        GoBack.isDown = false;
+
         //加载场景，但不销毁原场景
         //LoadSceneMode有两种：Single表示关闭原场景，Additive表示将场景添加到当前加载的场景中
         //SceneManager.LoadSceneAsync("Vuforia", LoadSceneMode.Single);

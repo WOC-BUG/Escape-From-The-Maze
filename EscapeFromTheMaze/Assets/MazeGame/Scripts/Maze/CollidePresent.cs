@@ -8,7 +8,7 @@ public class CollidePresent : MonoBehaviour
     public GameObject parameter;
     void Start()
     {
-        //DontDestroyOnLoad(parameter);
+
     }
     void OnTriggerEnter(Collider other)
     {
@@ -17,6 +17,10 @@ public class CollidePresent : MonoBehaviour
         Debug.Log("是否获取到星星：" + PassParameter.star);
         Debug.Log("是否获取到礼物：" + PassParameter.present);
         Debug.Log("是否获取到雪花：" + PassParameter.snow);
+
+        // 设置按钮未按下
+        GoForward.isDown = false;
+        GoBack.isDown = false;
 
         Destroy(GameObject.Find("Present-01"));     //碰撞后就销毁物体
         SceneManager.LoadScene("Vuforia");

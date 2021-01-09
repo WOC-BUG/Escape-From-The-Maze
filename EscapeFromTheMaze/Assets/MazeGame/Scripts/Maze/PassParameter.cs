@@ -17,10 +17,10 @@ public class PassParameter : MonoBehaviour
     static public float time = 0;  //计时
     static public bool finishGame = false;    //是否正常通关
 
+
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
