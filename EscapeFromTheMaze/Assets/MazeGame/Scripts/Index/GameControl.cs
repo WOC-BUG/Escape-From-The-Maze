@@ -34,17 +34,16 @@ public class GameControl : MonoBehaviour
         oldTime = GameObject.Find("TimeScore").GetComponent<Text>().text;
         passObject = GameObject.Find("Parameter");
 
-        Debug.Log("finishGame：" + passObject.GetComponent<PassParameter>().finishGame);
-        //Debug.Log("oldTime：" + oldTime);
-        //Debug.Log("nowTime：" + passObject.GetComponent<PassParameter>().time);
+        Debug.Log("finishGame：" + PassParameter.finishGame);
 
         //如果游戏成功完成，且时间为-1，或者游戏用时更短了就更新记录
-        if (passObject.GetComponent<PassParameter>().finishGame == true &&
-            (oldTime == "-1" || float.Parse(oldTime) > passObject.GetComponent<PassParameter>().time))
+        if (PassParameter.finishGame == true &&
+            (oldTime == "-1" || float.Parse(oldTime) > PassParameter.time))
         {
-            passObject.GetComponent<PassParameter>().finishGame = false;
-            GameObject.Find("TimeScore").GetComponent<Text>().text = passObject.GetComponent<PassParameter>().time.ToString();  //时间赋值
+            PassParameter.finishGame = false;
+            GameObject.Find("TimeScore").GetComponent<Text>().text = PassParameter.time.ToString();  //时间赋值
         }
+        GameObject.Find("ObjectNumber").GetComponent<Text>().text = PassParameter.number.ToString();    //获取物品赋值
     }
 
     // Update is called once per frame

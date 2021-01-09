@@ -12,12 +12,13 @@ public class CollidePresent : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        parameter.GetComponent<PassParameter>().number++;  //获取物品数目+1
-        parameter.GetComponent<PassParameter>().present = true;    // 标记获得礼物
-        Debug.Log("是否获取到星星：" + parameter.GetComponent<PassParameter>().star);
-        Debug.Log("是否获取到礼物：" + parameter.GetComponent<PassParameter>().present);
-        Debug.Log("是否获取到雪花：" + parameter.GetComponent<PassParameter>().snow);
+        PassParameter.number++;  //获取物品数目+1
+        PassParameter.present = true;    // 标记获得礼物
+        Debug.Log("是否获取到星星：" + PassParameter.star);
+        Debug.Log("是否获取到礼物：" + PassParameter.present);
+        Debug.Log("是否获取到雪花：" + PassParameter.snow);
 
+        Destroy(GameObject.Find("Present-01"));     //碰撞后就销毁物体
         SceneManager.LoadScene("Vuforia");
         //SceneManager.LoadSceneAsync("Vuforia", LoadSceneMode.Additive);
     }

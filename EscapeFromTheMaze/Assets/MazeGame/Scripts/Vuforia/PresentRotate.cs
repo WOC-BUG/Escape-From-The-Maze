@@ -16,7 +16,7 @@ public class PresentRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pm.GetComponent<PassParameter>().present == false)
+        if (PassParameter.present == false)
             present.SetActive(false);//隐藏物体
         else
             present.SetActive(true);//显示物体

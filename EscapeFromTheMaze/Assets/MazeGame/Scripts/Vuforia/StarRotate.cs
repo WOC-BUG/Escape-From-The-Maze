@@ -16,7 +16,7 @@ public class StarRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pm.GetComponent<PassParameter>().star == false)
+        if (PassParameter.star == false)
             star.SetActive(false);//隐藏物体
         else
             star.SetActive(true);//显示物体

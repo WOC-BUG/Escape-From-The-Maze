@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MazeGame\Scripts\EmptyScene\LoadMaze.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Index\GameControl.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\CollideEffect.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\CollidePresent.cs" />
@@ -61,6 +60,8 @@
      <Compile Include="Assets\MazeGame\Scripts\Maze\CollideStar.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\ControlCamera.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\ControlGame.cs" />
+     <Compile Include="Assets\MazeGame\Scripts\Maze\GoBack.cs" />
+     <Compile Include="Assets\MazeGame\Scripts\Maze\GoForward.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\PassParameter.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\Rotate.cs" />
      <Compile Include="Assets\MazeGame\Scripts\Maze\Run.cs" />

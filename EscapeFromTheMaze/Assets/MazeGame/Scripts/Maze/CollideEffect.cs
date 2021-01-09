@@ -19,7 +19,7 @@ public class CollideEffect : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        parameter.GetComponent<PassParameter>().finishGame = true;  //标记游戏通关
+        PassParameter.finishGame = true;  //标记游戏通关
         SceneManager.LoadScene("Index");    //返回首页
         //SceneManager.LoadSceneAsync("Index", LoadSceneMode.Additive);
     }

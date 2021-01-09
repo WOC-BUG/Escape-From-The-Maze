@@ -16,7 +16,7 @@ public class SnowRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pm.GetComponent<PassParameter>().snow == false)
+        if (PassParameter.snow == false)
             snow.SetActive(false);//隐藏物体
         else
             snow.SetActive(true);//显示物体

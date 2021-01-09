@@ -30,7 +30,8 @@ public class ControlGame : MonoBehaviour
 
     public void Restart()
     {
-        passObject.GetComponent<PassParameter>().finishGame = false;  //标记游戏未通关
+        PassParameter.finishGame = false;  //标记游戏未通关
+        PassParameter.number = 0;  //获得物品清空
         SceneManager.LoadScene("Index"); //重新加载场景
     }
 }

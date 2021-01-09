@@ -6,8 +6,10 @@ public class Run : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public float rotateSpeed = 2f;
-    //private Rigidbody rb;   //刚体对象    
-    //public int speed = 5;   //小球移动速度
+    private float h = 0;
+    private float v = 0;
+
+    //private Rigidbody rb;   //刚体对象
 
     // Use this for initialization
     void Start()
@@ -17,24 +19,37 @@ public class Run : MonoBehaviour
 
     void Update()
     {
-        ////Input.GetAxis用于检测是否按下键盘按键
-        //float h = Input.GetAxis("Horizontal");  //Horizontal表示水平按键
-        //float v = Input.GetAxis("Vertical");    //Vertical表示垂直按键
+        //首先检测有没有点击按钮，没有再选择键盘输入
+        if (Mathf.Abs(GoForward.h) > 0 || Mathf.Abs(GoForward.v) > 0)
+        {
+            h = GoForward.h;
+            v = GoForward.v;
+        }
+        else if (Mathf.Abs(GoBack.h) > 0 || Mathf.Abs(GoBack.v) > 0)
+        {
+            h = GoBack.h;
+            v = GoBack.v;
+        }
+        else
+        {
+            //Input.GetAxis用于检测是否按下键盘按键
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+        }
 
-        //rb.AddForce(new Vector3(h, 0, v) * speed);  //添加一个力
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        //rb.AddForce(new Vector3(h, 0, v) * moveSpeed);  //给刚体添加一个力
+
+        //移动物体
         if (h != 0 || v != 0)
         {
             Vector3 targetDirection = new Vector3(h, 0, v);
+
+            //将方向转换为相对于摄像机的方向
             float y = Camera.main.transform.rotation.eulerAngles.y;
             targetDirection = Quaternion.Euler(0, y, 0) * targetDirection;
 
+            //更新位置
             transform.Translate(targetDirection * Time.deltaTime * moveSpeed, Space.World);
-        }
-        if (Input.GetKey(KeyCode.J))
-        {
-            transform.Rotate(-Vector3.up * Time.deltaTime * rotateSpeed);
         }
     }
 }
